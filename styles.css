@@ -1,0 +1,379 @@
+*,
+*::before,
+*::after {
+
+  /* background-color: #e7f0f1; */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: #e7f0f1;
+}
+
+
+
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/heroVec1.svg");
+  background-repeat: no-repeat;
+  background-size: 700px;
+  background-position-x: 0px;
+  background-position-y: -30px;
+  background-color: #e7f0f1;
+}
+
+.logo img {
+  display: flex;
+  cursor: pointer;
+  width: 196px;
+  /* height: 101px; */
+  justify-content: center;
+  align-items: center; 
+  flex-shrink: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+    padding-left: 50px;
+    
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #0A3A44;
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  font-size: 16px;
+}
+
+nav ul li:hover {
+  color: #5998A4;
+  padding-left: 8px;
+  transition: 0.3s;
+}
+
+
+/*  For the toggle button */
+
+.container {
+    width: 100%;
+    /* height: 100vh; */
+    /* background-color: aliceblue; */
+    display: flex;
+    padding-left: 40px;
+    align-items: center;
+    transform: translateY(22%);
+    justify-content: center;
+}
+
+.button {
+    background-color: #D9D9D9;
+    width: 48px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 200px;
+    transition: 0.2s;
+}
+
+.button::before {
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+input:checked + .button {
+    background-color: #5998A4;
+    content: '';
+}
+
+input:checked + .button::before {
+   transform: translate(22.5px);
+}
+
+input {
+    display: none;
+}
+
+
+/* Banner section */
+
+/* body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+} */
+
+.products-banner {
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.2);
+  margin: 0px auto;
+  border-radius: 30px;
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  background-image: url("assets/p1.png");
+  animation: changeImage 20s linear 7s infinite;
+}
+
+@keyframes changeImage {
+  0% {
+      background-image: url("assets/p1.png");
+  }
+  20% {
+      background-image: url("assets/p2.png");
+  }
+  40% {
+      background-image: url("assets/p3.png");
+  }
+  60% {
+      background-image: url("assets/p1.png");
+  }
+  80% {
+      background-image: url("assets/p2.png");
+  }
+  100% {
+      background-image: url("assets/p3.png");
+  }
+}
+
+
+.banner-header h1 {
+  font-weight: 700;
+  color: #0A3A44;
+  margin: 0;
+}
+
+.banner-quote span {
+  font-weight: 300;
+  color: rgba(33, 33, 33, 0.80);
+}
+
+.banner-desc {
+}
+
+.banner-desc span {
+  color: #0A3A44;
+}
+
+.cta-1 button {
+  border-radius: 30px;
+  width: 150px;
+  /* margin-top: 10px; */
+  height: 45px;
+  color: #0A3A44;
+  /* background: #fff; */
+  border: 1px solid #0A3A44;
+  cursor: pointer;
+}
+
+.cta-1 button:hover {
+  background: #5998A4;
+  border: none;
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+
+/* About section */
+
+.about-section {
+  width: 100%;
+  background-image: url("../assets/aboutVec.svg");
+  background-repeat: no-repeat;
+  background-size: 540px;
+  /* background-position-x: 500px;
+  background-position-y: -30px; */
+  background-position: right;
+  background-color: #e7f0f1;
+}
+
+.about-content {
+  height: 100%;
+  text-align: left;
+}
+
+.about-img img {
+
+
+}
+
+.about-head p {
+  color: black;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.about-main h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0A3A44;
+}
+
+.about-details p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #0A3A44;
+}
+
+/* testimonials */
+
+.testimonial {
+  background-image: url('../assets/testimonialVec.svg');
+  width: 100%;
+  background-color: #e7f0f1;
+  background-repeat: no-repeat;
+}
+
+.testimonial-title h1 {
+  font-weight: 700;
+  color: #0A3A44;
+  opacity: 0.75;
+}
+
+.testimonial-avatar img {
+  height: 100px;
+  /* top: 30%; */
+  /* transform: translateY(-30%); */
+}
+
+.testimonial-card {
+  border-radius: 30px;
+  background-color: #fff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+}
+
+
+.testimonial-card p {
+  /* margin: 100px 30px 30px 30px; */
+  text-align: center;
+}
+
+/* contact section */
+.contact-section {
+  background-image: url('../assets/contactVec.png');
+  background-repeat: no-repeat;
+  background-color: #e7f0f1;
+  background-size: 800px;
+  background-position-y: 40px;
+}
+
+.contact-content {
+
+}
+
+.contact-content h1 {
+  opacity: 0.95;
+  font-weight: 700;
+  color: #5998A4;
+}
+
+.contact-content p {
+  color: #0A3A44;
+}
+
+.card-1 {
+  display: flex;
+}
+
+.card-1 img {
+}
+
+.card-1 p {
+  color: #5998A4;
+
+}
+
+
+/* footer */
+
+.footer {
+  background-color: #0A3A44;
+  color: #e7f0f1;
+  padding: 70px 0;
+  
+}
+
+.footer-container {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;  
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  /* padding: 0 102px; */
+}
+
+.footer-col h1 {
+  font-size: 18px;
+  color: #5998A4;
+  font-weight: 600;
+  /* opacity: 0.5; */
+}
+
+/* .footer-col h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #5998A4;
+  height: 2px;
+  width: 50px;
+} */
+
+.footer-col ul {
+  list-style: none;
+}
+
+
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-card img {
+  width: 24px;
+  height: 28px;
+  margin-right: 16px;
+}
+
+.footer-card {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.footer-foot {
+  background-color: #5998A4;
+  color: #fff;
+  font-size: 16px;
+}
+
+
